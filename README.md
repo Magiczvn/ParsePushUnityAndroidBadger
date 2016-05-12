@@ -1,11 +1,12 @@
 ## Installation
 
+- Assume that your Unity project has Parse setup and installed.
 - Compile the project into jar file.
 - Copy badger.jar + compiled jar file in to Assets/Plugins/Android folder
 - Remove ParsePush.jar if it exists in the Assets/Plugins/Android folder
-- Add these line to your AndroidManifest.xml
-- 
-```xml
+- Add these lines to your AndroidManifest.xml
+  
+  ```xml
   <!-- for Samsung -->
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
@@ -26,15 +27,21 @@
 
 ## Usage
 
-TODO: Write usage instructions
+- Badge number will automatic increased when receive notification.
+- To reset badge number, use these codes in your Unity script.
+```cs
+#if UNITY_ANDROID && !UNITY_EDITOR        
 
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+        using (AndroidJavaClass pluginClass = new AndroidJavaClass("com.parse.ParsePushUnityHelper"))
+        {
+            if (pluginClass != null)
+            {
+                pluginClass.CallStatic("ResetBadgeNumber");    
+            }
+        }
+        
+#endif
+```
 
 ## History
 
@@ -43,7 +50,4 @@ TODO: Write history
 ## Credits
 
 - ShortcutBadger: https://github.com/leolin310148/ShortcutBadger
-
-## License
-
-TODO: Write license
+- ParsePush Native Android: https://github.com/ParsePlatform/Parse-SDK-dotNET/tree/master/ParsePush/Native
