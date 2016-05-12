@@ -1,6 +1,28 @@
 ## Installation
 
-TODO: Describe the installation process
+- Compile the project into jar file.
+- Copy badger.jar + compiled jar file in to Assets/Plugins/Android folder
+- Remove ParsePush.jar if it exists in the Assets/Plugins/Android folder
+- Add these line to your AndroidManifest.xml
+- 
+```xml
+  <!-- for Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+
+    <!-- for htc -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+
+    <!-- for sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+
+    <!-- for apex -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+
+    <!-- for solid -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+  ```
 
 ## Usage
 
