@@ -2,9 +2,9 @@
 
 - Assume that your Unity project has Parse setup and installed.
 - Compile the project into jar file.
-- Copy badger.jar + compiled jar file in to Assets/Plugins/Android folder
-- Remove ParsePush.jar if it exists in the Assets/Plugins/Android folder
-- Add these lines to your AndroidManifest.xml
+- Copy badger.jar + compiled jar file in to Assets/Plugins/Android folder.
+- Remove ParsePush.jar if it exists in the Assets/Plugins/Android folder.
+- Add these lines to your AndroidManifest.xml.
   
   ```xml
   <!-- for Samsung -->
