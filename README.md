@@ -43,10 +43,6 @@
 #endif
 ```
 
-## History
-
-TODO: Write history
-
 ## Credits
 
 - ShortcutBadger: https://github.com/leolin310148/ShortcutBadger
