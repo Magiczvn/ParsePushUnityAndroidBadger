@@ -27,7 +27,7 @@
 
 ## Usage
 
-- Badge number will automatically increased when it received notification.
+- Badge number will automatically increased when the app/game received notification.
 - To reset badge number, use these codes in your Unity script.
 ```cs
 #if UNITY_ANDROID && !UNITY_EDITOR        
